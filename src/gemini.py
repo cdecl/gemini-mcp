@@ -1,6 +1,7 @@
 import os
 from fastmcp import FastMCP
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 
 mcp = FastMCP("Gemini MCP Server")
@@ -30,9 +31,25 @@ def _prompt(prompt_s: str) -> str:
     if not key:
         raise ValueError("GEMINI_API_KEY environment variable not set.")
 
-    genai.configure(api_key=key)
-    model = genai.GenerativeModel(model_name)
-    response = model.generate_content(prompt_s)
+    client = genai.Client(api_key=key)
+
+    # Google Search 그라운딩 도구 정의
+    grounding_tool = types.Tool(
+        google_search=types.GoogleSearch()
+    )
+
+    # 생성 설정 구성
+    config = types.GenerateContentConfig(
+        tools=[grounding_tool]
+    )
+
+    # 요청 실행
+    response = client.models.generate_content(
+        model=model_name,
+        contents=prompt_s,
+        config=config,
+    )
+
     retval = response.text
     print(f"Prompt: {prompt_s}\nModel: {model_name}\nResponse: {retval}")
     return retval
