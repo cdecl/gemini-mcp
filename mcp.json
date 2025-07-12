@@ -1,8 +1,13 @@
 {
   "mcpServers": {
     "gemini": {
-      "command": "python",
-      "args": ["path/gemini-mcp/gemini.py"],
+      "command": "uv",
+      "args": [
+        "run", 
+        "--directory",
+        "path_to_/gemini-mcp/",
+        "path_to_/gemini-mcp/src/gemini.py"
+      ],
       "env": {
         "GEMINI_API_KEY": "YOUR_API_KEY_HERE",
         "GEMINI_MODEL": "gemini-2.5-flash"

@@ -6,9 +6,12 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastmcp>=2.10.5",
-    "openai>=1.95.1",
     "pytest>=8.4.1",
+    "google-genai>=1.25.0",
 ]
+
+[project.scripts]
+gemini-mcp = "src.gemini:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
