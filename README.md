@@ -4,7 +4,7 @@ This project provides a `fastmcp` server that interacts with the Google Gemini A
 
 ## Features
 
-- **Gemini AI Integration**: Utilizes the `openai` library to communicate with the Google Gemini AI model.
+- **Gemini AI Integration**: Utilizes the `google-genai` library to communicate with the Google Gemini AI model, including support for Google Search grounding.
 - **`fastmcp` Server**: Exposes a `prompt` tool via a `fastmcp` server for easy integration with `fastmcp` clients.
 - **Environment Variable Configuration**: API key and model name are configured via environment variables (`GEMINI_API_KEY`, `GEMINI_MODEL`).
 - **Testable**: Includes `pytest` for unit testing with mocked API calls.
