@@ -2,7 +2,7 @@ import os
 import pytest
 from unittest import mock
 from dotenv import load_dotenv
-from src.gemini import _prompt
+from gemini_mcp.gemini import _prompt
 
 
 @pytest.fixture

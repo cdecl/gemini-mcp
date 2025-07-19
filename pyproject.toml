@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-gemini-mcp = "src.gemini:main"
+gemini-mcp = "gemini_mcp.gemini:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
