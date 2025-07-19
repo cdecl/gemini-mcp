@@ -58,6 +58,25 @@ For `fastmcp` clients, you can use the provided `mcp.json` file to configure the
 {
   "mcpServers": {
     "gemini": {
+      "command": "uvx",
+      "args": [
+        "--from", 
+        "https://github.com/cdecl/gemini-mcp.git",
+        "gemini-mcp"
+      ],
+      "env": {
+        "GEMINI_API_KEY": "YOUR_API_KEY_HERE",
+        "GEMINI_MODEL": "gemini-2.5-flash"
+      }
+    }
+  }
+}
+```
+
+```json
+{
+  "mcpServers": {
+    "gemini": {
       "command": "uv",
       "args": [
         "run", 
