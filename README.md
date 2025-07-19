@@ -43,7 +43,7 @@ uvx gemini-mcp
 Alternatively, you can run it directly:
 
 ```bash
-python src/gemini.py
+python src/gemini_mcp/gemini.py
 ```
 
 This will start the `fastmcp` server, listening for incoming requests.
@@ -63,7 +63,7 @@ For `fastmcp` clients, you can use the provided `mcp.json` file to configure the
         "run", 
         "--directory",
         "path_to_/gemini-mcp/",
-        "path_to_/gemini-mcp/src/gemini.py"
+        "path_to_/gemini-mcp/src/gemini_mcp/gemini.py"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_API_KEY_HERE",
