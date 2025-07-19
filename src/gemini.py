@@ -55,5 +55,9 @@ def _prompt(prompt_s: str) -> str:
     return retval
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
