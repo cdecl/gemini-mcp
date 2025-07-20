@@ -54,6 +54,7 @@ For `fastmcp` clients, you can use the provided `mcp.json` file to configure the
 
 **`mcp.json` example:**
 
+- using uvx 
 ```json
 {
   "mcpServers": {
@@ -61,7 +62,7 @@ For `fastmcp` clients, you can use the provided `mcp.json` file to configure the
       "command": "uvx",
       "args": [
         "--from", 
-        "https://github.com/cdecl/gemini-mcp.git",
+        "git+https://github.com/cdecl/gemini-mcp",
         "gemini-mcp"
       ],
       "env": {
@@ -73,6 +74,7 @@ For `fastmcp` clients, you can use the provided `mcp.json` file to configure the
 }
 ```
 
+- using uv with git clone
 ```json
 {
   "mcpServers": {

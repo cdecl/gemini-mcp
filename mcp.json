@@ -1,12 +1,11 @@
 {
   "mcpServers": {
     "gemini": {
-      "command": "uv",
+      "command": "uvx",
       "args": [
-        "run", 
-        "--directory",
-        "path_to_/gemini-mcp/",
-        "path_to_/gemini-mcp/src/gemini.py"
+        "--from", 
+        "git+https://github.com/cdecl/gemini-mcp",
+        "gemini-mcp"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_API_KEY_HERE",
